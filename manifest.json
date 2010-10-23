@@ -1,0 +1,13 @@
+{
+  "name": "My Gists",
+  "version": "1.0",
+  "description": "Displays a list of your Github gists.",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "mygists.html"
+  },
+  "options_page": "options.html"
+}

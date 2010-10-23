@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function save() {
+    if(localStorage.prefs) {
+        var prefs = JSON.parse(localStorage.prefs);
+    }
+    else {
+        var prefs = {};
+    }
+    
+    prefs.github_username = $("#github-username").val();
+    localStorage.prefs = JSON.stringify(prefs);
+    alert("saved username " + prefs.github_username);
+}
+
+$(document).ready(function() {
+    if(localStorage.prefs) {
+        var prefs = JSON.parse(localStorage.prefs);
+        $("#github-username").val(prefs.github_username);
+    }
+});
+
+</script>
+</head>
+<body>
+<h2>Options</h2>
+<br>
+Github Username: 
+<input id="github-username" type="text" value="" />
+<input type="button" onclick="javascript:save();" value="save" />
+
+
+
+</body>
+</html>

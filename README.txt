@@ -1,4 +1,4 @@
-mygist-chrome-ext
+mygists-chrome-ext
 =================
 
 Simple chrome extension that shows and links to all of a users GitHub 
